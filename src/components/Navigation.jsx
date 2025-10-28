@@ -23,12 +23,19 @@ function Navigation() {
     setMobileOpen(!mobileOpen);
   };
 
+  // const navItems = [
+  //   { text: "Hem", path: "/" },
+  //   { text: "Träskulpturer", path: "/sculptures" },
+  //   { text: "Trädfällning", path: "/trees" },
+  //   { text: "Utbildning", path: "/education" },
+  //   { text: "Om oss", path: "/about" },
+  // ];
   const navItems = [
     { text: "Hem", path: "/" },
-    { text: "Träskulpturer", path: "/sculptures" },
-    { text: "Trädfällning", path: "/trees" },
-    { text: "Utbildning", path: "/education" },
-    { text: "Om oss", path: "/about" },
+    { text: "Träskulpturer", path: "/traskulpturer" },
+    { text: "Trädfällning", path: "/tradfallning" },
+    { text: "Utbildning", path: "/utbildning" },
+    { text: "Om oss", path: "/om-oss" },
   ];
 
   const drawerHeight = 61;

@@ -3,17 +3,17 @@ const { SitemapStream, streamToPromise } = require('sitemap');
 const { createWriteStream } = require('fs');
 
 // Replace with your domain name
-const domain = 'https://stoke.se';
+const domain = 'https://neves.nu';
 
 (async () => {
   // Define all your public routes here
   const routes = [
     '/',
-    '/about',
-    '/contact',
-    '/courses',
-    '/shop',
-    '/events',
+    '/traskulpturer',
+    '/tradfallning',
+    '/utbildning',
+    '/om-oss',
+  
   ];
 
   // Create a stream and pipe it to sitemap.xml in /public

@@ -21,13 +21,21 @@ function App() {
         <Container maxWidth="lg">
         <CssBaseline />
         <Box sx={{ paddingTop: { xs: 2, sm: 3, md: 4 } }}>
-          <Routes>
+          {/* <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/sculptures" element={<Sculptures />} />
             <Route path="/trees" element={<Trees />} />
             <Route path="/education" element={<Education />} />
-            {/* Add more routes as needed */}
+        
+          </Routes> */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/om-oss" element={<About />} />
+            <Route path="/traskulpturer" element={<Sculptures />} />
+            <Route path="/tradfallning" element={<Trees />} />
+            <Route path="/utbildning" element={<Education />} />
+
           </Routes>
        
           </Box>
