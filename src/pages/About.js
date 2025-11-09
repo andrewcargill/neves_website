@@ -31,7 +31,7 @@ function About() {
         />
         <meta property="og:image" content="https://neves.se/siteImage.jpg" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://neves.se/about" />
+        <meta property="og:url" content="https://neves.se/om-oss" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 

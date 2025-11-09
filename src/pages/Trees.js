@@ -31,9 +31,33 @@ function Trees() {
           property="og:description"
           content="Professionella trädfällningstjänster av Andreas Neves – certifierad instruktör med fokus på säkerhet, precision och hållbarhet. RUT-avdrag för privatpersoner."
         />
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Trädfällning",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Neves Art & Craft",
+          "areaServed": "Västerbotten",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Vindeln",
+            "addressRegion": "Västerbotten",
+            "postalCode": "922 32",
+            "addressCountry": "SE"
+          },
+          "telephone": "+46 70 360 1997",
+          "url": "https://neves.nu/tradfallning"
+        },
+        "description": "Certifierad och försäkrad trädfällning i Västerbotten. Vi erbjuder trädfällning med RUT-avdrag för privatpersoner."
+      }
+    `}
+        </script>
         <meta property="og:image" content="https://neves.se/siteImage.jpg" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://neves.se/trees" />
+        <meta property="og:url" content="https://neves.se/tradfallning" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Box>
@@ -52,9 +76,9 @@ function Trees() {
           }}
         >
           <Typography
-            variant="h2"
+            variant="h1"
             margin={2}
-            sx={{ fontWeight: 700 }}
+            sx={{ fontSize: "2.7rem", fontWeight: 700 }}
             backgroundColor="rgba(0, 0, 0, 0.5)"
             color="white"
           >

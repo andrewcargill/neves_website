@@ -9,7 +9,7 @@ import Helmet from "react-helmet";
 function Home() {
 
     const [currentImage, setCurrentImage] = useState(0);
-  const images = [backgroundImage, image2, image3];
+  const images = [image2, backgroundImage ];
 
   // Auto-advance images every 4 seconds
   useEffect(() => {
@@ -50,22 +50,7 @@ function Home() {
           overflow: "hidden",
         }}
       >
-        {/* Background Image with Parallax Effect */}
-        {/* <Box
-          sx={{
-            position: "absolute",
-            top: `${offset.y}px`,
-            left: `${offset.x}px`,
-            width: "110%",
-            height: "110%",
-            backgroundImage: `url(${backgroundImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            filter: "brightness(0.8)",
-            zIndex: -1,
-            transition: "transform 0.1s ease-out",
-          }}
-        /> */}
+
         {/* Carousel Background */}
         {images.map((img, index) => (
           <Box

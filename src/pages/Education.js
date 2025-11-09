@@ -34,7 +34,7 @@ function Education() {
         />
         <meta property="og:image" content="https://neves.se/siteImage.jpg" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://neves.se/education" />
+        <meta property="og:url" content="https://neves.se/utbildning" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Box mb={8}>

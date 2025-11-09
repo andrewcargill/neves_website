@@ -27,7 +27,7 @@ function Sculptures() {
         />
         <meta property="og:image" content="https://neves.se/siteImage.jpg" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://neves.se/sculptures" />
+        <meta property="og:url" content="https://neves.se/traskulpturer" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Box mb={8}>
