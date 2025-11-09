@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Typography, Button, Box, Container } from "@mui/material";
 import { Link } from "react-router-dom";
-import backgroundImage from "../assets/media/images/general/home.webp";
+import backgroundImage from "../assets/media/images/general/home1.webp";
+import image2 from "../assets/media/images/trees/tree_felling.webp";
+import image3 from "../assets/media/images/trees/tree_header.webp";
 import Helmet from "react-helmet";
 
 function Home() {
+
+    const [currentImage, setCurrentImage] = useState(0);
+  const images = [backgroundImage, image2, image3];
+
+  // Auto-advance images every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
 
   return (
@@ -38,7 +51,7 @@ function Home() {
         }}
       >
         {/* Background Image with Parallax Effect */}
-        <Box
+        {/* <Box
           sx={{
             position: "absolute",
             top: `${offset.y}px`,
@@ -52,7 +65,27 @@ function Home() {
             zIndex: -1,
             transition: "transform 0.1s ease-out",
           }}
-        />
+        /> */}
+        {/* Carousel Background */}
+        {images.map((img, index) => (
+          <Box
+            key={index}
+            sx={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              backgroundImage: `url(${img})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              filter: "brightness(0.8)",
+              opacity: index === currentImage ? 1 : 0,
+              transition: "opacity 1.5s ease-in-out",
+              zIndex: -1,
+            }}
+          />
+        ))}
 
         {/* Content (Centered) */}
         <Container maxWidth="md">

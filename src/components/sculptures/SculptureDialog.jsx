@@ -45,15 +45,41 @@ function SculptureDialog({ open, onClose, sculpture }) {
         <Card>
           {/* Image Slider */}
           <Slider {...settings}>
-            {images.map((image, index) => (
-              <CardMedia
-                key={index}
-                component="img"
-                height="300"
-                image={image}
-                alt={`${sculpture.title} - Image ${index + 1}`}
-              />
-            ))}
+            {images.map((imageObj, index) => {
+  const src = imageObj.src || imageObj; // supports backward compatibility
+  const focal = imageObj.focal || sculpture.dialogFocal || sculpture.focal || "center";
+  const fit = imageObj.fit || "cover";
+
+  return (
+    <Box
+      key={index}
+      sx={{
+        height: { xs: 300, sm: 400 },
+        width: "100%",
+        overflow: "hidden",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#f5f5f5",
+      }}
+    >
+      <img
+        src={src}
+        alt={`${sculpture.title} - Image ${index + 1}`}
+        loading="lazy"
+        decoding="async"
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: fit,
+          objectPosition: focal,
+          display: "block",
+        }}
+      />
+    </Box>
+  );
+})}
+
           </Slider>
 
           <CardContent>

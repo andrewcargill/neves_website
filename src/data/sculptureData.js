@@ -25,48 +25,62 @@ import cow1 from '../assets/media/images/projects/cow/cow1.webp';
 import cow2 from '../assets/media/images/projects/cow/cow2.webp';
 import cow3 from '../assets/media/images/projects/cow/cow3.webp';
 import cow4 from '../assets/media/images/projects/cow/cow4.webp';
-import cow5 from '../assets/media/images/projects/cow/cow5.webp';
 import cow6 from '../assets/media/images/projects/cow/cow6.webp';
 import cow7 from '../assets/media/images/projects/cow/cow7.webp';
 
 import bamse1 from '../assets/media/images/projects/bamse/bamse1.webp';
 import bamse2 from '../assets/media/images/projects/bamse/bamse2.webp';
+import bamse2a from '../assets/media/images/projects/bamse/bamse2a.webp';
 import bamse3 from '../assets/media/images/projects/bamse/bamse3.webp';
 
-import church1 from '../assets/media/images/projects/church/church1.webp';
+import church1a from '../assets/media/images/projects/church/church1a.webp';
 import church2 from '../assets/media/images/projects/church/church2.webp';
 import church3 from '../assets/media/images/projects/church/church3.webp';
-import church4 from '../assets/media/images/projects/church/church4.webp';
+import church4a from '../assets/media/images/projects/church/church4a.webp';
 
-import lamp1 from '../assets/media/images/projects/lamp/lamp1.webp';
+
+import lamp1a from '../assets/media/images/projects/lamp/lamp1a.webp';
 import lamp2 from '../assets/media/images/projects/lamp/lamp2.webp';
-import lamp3 from '../assets/media/images/projects/lamp/lamp3.webp';
-import lamp4 from '../assets/media/images/projects/lamp/lamp4.webp';
+import lamp3a from '../assets/media/images/projects/lamp/lamp3a.webp';
 
-import rakel1 from '../assets/media/images/projects/rakel/web_rakel1.webp';
-import rakel2 from '../assets/media/images/projects/rakel/web_rakel2.webp';
-import rakel3 from '../assets/media/images/projects/rakel/web_rakel3.webp';
-import rakel4 from '../assets/media/images/projects/rakel/web_rakel4.webp';
+import rakel1 from '../assets/media/images/projects/rakel/web_rakel1a.webp';
+import rakel2 from '../assets/media/images/projects/rakel/web_rakel2a.webp';
+import rakel3 from '../assets/media/images/projects/rakel/web_rakel3a.webp';
+import rakel4 from '../assets/media/images/projects/rakel/web_rakel4a.webp';
 
 
 const sculptureData = [
   {
     id: 1,
     img: raven3,
-    images: { raven1, raven2, raven3 },
+      images: [
+    { src: raven3, focal: "top" },
+    { src: raven2, focal: "bottom" },
+    { src: raven1, focal: "top" }
+  ],
     title: 'Hugin och Munin',
     description: 'En rolig beställning från LApland Guesthouse i Kangos',
+
     year: 2016,
     location: 'Kangos, Sweden',
     dimensions: 'Skala 1:1',
     material: 'Furu',
   },
+
   {
     id: 2,
     img: owl2,
-    images: { owl5, owl2, owl4, owl3, owl1, owl6 },
+    images: [
+    { src: owl5, focal: "top" },
+    { src: owl2, focal: "center" },
+    { src: owl4, focal: "center" },
+    { src: owl3, focal: "center" },
+    { src: owl1, focal: "center" },
+    { src: owl6, focal: "center" }
+  ],
     title: 'Lappugglan',
     description: 'En beställning från Lapland guesthouse i Kangos',
+
     year: 2016,
     location: 'KAngos, Sweden',
     dimensions: 'Skala 1:1',
@@ -97,7 +111,14 @@ const sculptureData = [
   {
     id: 5,
     img: cow6,
-    images: { cow1, cow2, cow3, cow4, cow5, cow6, cow7 },
+    images: [
+      { src: cow1, focal: "center" },
+      { src: cow2, focal: "center" },
+      { src: cow3, focal: "center" },
+      { src: cow4, focal: "top" },
+      { src: cow6, focal: "center" },
+      { src: cow7, focal: "top" }
+    ],
     title: 'Gullblom',
     description: 'Vindelns hembygdsförening utvecklar sin verksamhet med att skapa miljöer som tar besökaren tillbaka i tiden. Vi skulpterade en ko i naturlig storlek som nu står i deras ladugård.',
     year: 2023,
@@ -107,19 +128,29 @@ const sculptureData = [
   },
   {
     id: 6,
-    img: bamse2,
-    images: { bamse1, bamse2, bamse3 },
+    img: bamse2a,
+    images: [
+      { src: bamse2a, focal: "top" },
+      { src: bamse1, focal: "top" },
+      { src: bamse3, focal: "center" }
+    ],
     title: 'Bamse, Världens starkaste björn',
     description: 'Privat beställning till en privatperson',
     year: 2017,
+    focal: 'top',
     location: 'Vindeln, Sweden',
     dimensions: 'Skala 1:1',
     material: 'Furu',
   },
   {
     id: 7,
-    img: church4,
-    images: { church4, church1, church2, church3 },
+    img: church3,
+    images: [
+      { src: church4a, focal: "center" },
+      { src: church1a, focal: "center" },
+      { src: church2, focal: "center" },
+      { src: church3, focal: "center" }
+    ],
     title: 'Kyrkspiran',
     description: 'Ett spännande och lärorikt projekt för Vindelns församling. Vi restaurerade en kyrkspira som nu pryder Vindelns kyrka.',
     year: 2018,
@@ -129,8 +160,8 @@ const sculptureData = [
   },
   {
     id: 8,
-    img: lamp1,
-    images: { lamp1, lamp2, lamp3, lamp4 },
+    img: lamp1a,
+    images: { lamp1a, lamp2, lamp3a},
     title: 'Lampor',
     description: 'Vi har alltid varit nyfikna på hur belysning kan förändra en miljö. Därför har vi skapat en serie lampor som vi säljer.',
     year: 2018,

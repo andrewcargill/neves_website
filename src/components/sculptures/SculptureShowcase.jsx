@@ -1,31 +1,38 @@
-import React, { useState } from 'react';
-import Slider from 'react-slick';
-import { Card, CardMedia, CardContent, Typography, Box, IconButton } from '@mui/material';
-import { ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material';
-import SculptureDialog from './SculptureDialog';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import sculptureData from '../../data/sculptureData';
-
+import React, { useState } from "react";
+import Slider from "react-slick";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  Box,
+  IconButton,
+} from "@mui/material";
+import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material";
+import SculptureDialog from "./SculptureDialog";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import sculptureData from "../../data/sculptureData";
+import ResponsiveCardImage from "../ResponsiveCardImage";
 
 // Custom Arrows
 const CustomPrevArrow = ({ onClick }) => (
   <IconButton
     onClick={onClick}
     sx={{
-      display: { xs: 'none', md: 'flex' },
-      position: 'absolute',
-      left: '-40px',
-      top: '50%',
-      transform: 'translateY(-50%)',
+      display: { xs: "none", md: "flex" },
+      position: "absolute",
+      left: "-40px",
+      top: "50%",
+      transform: "translateY(-50%)",
       zIndex: 2,
-      color: 'black',
-      '&:hover': {
-        backgroundColor: 'primary.main',
+      color: "black",
+      "&:hover": {
+        backgroundColor: "primary.main",
       },
     }}
   >
-    <ArrowBackIosNew sx={{ fontSize: '2.5rem' }} />
+    <ArrowBackIosNew sx={{ fontSize: "2.5rem" }} />
   </IconButton>
 );
 
@@ -33,19 +40,19 @@ const CustomNextArrow = ({ onClick }) => (
   <IconButton
     onClick={onClick}
     sx={{
-      display: { xs: 'none', md: 'flex' },
-      position: 'absolute',
-      right: '-40px',
-      top: '50%',
-      transform: 'translateY(-50%)',
+      display: { xs: "none", md: "flex" },
+      position: "absolute",
+      right: "-40px",
+      top: "50%",
+      transform: "translateY(-50%)",
       zIndex: 2,
-      color: 'black',
-      '&:hover': {
-        backgroundColor: 'primary.main',
+      color: "black",
+      "&:hover": {
+        backgroundColor: "primary.main",
       },
     }}
   >
-    <ArrowForwardIos sx={{ fontSize: '2.5rem' }} />
+    <ArrowForwardIos sx={{ fontSize: "2.5rem" }} />
   </IconButton>
 );
 
@@ -92,24 +99,35 @@ function SculptureShowcase() {
         {sculptureData.map((item, index) => (
           <Box key={index} sx={{ padding: 2 }}>
             <Card
-              onClick={() => handleCardClick(item)}  // Open dialog on click
+              onClick={() => handleCardClick(item)} // Open dialog on click
               sx={{
                 boxShadow: 3,
                 borderRadius: 2,
-                display: 'flex',
-                flexDirection: 'column',
-                height: '500px',
-                cursor: 'pointer',  
+                display: "flex",
+                flexDirection: "column",
+                height: "500px",
+                cursor: "pointer",
               }}
             >
-              <CardMedia
+              {/* <CardMedia
                 component="img"
                 height="300"
                 image={item.img}
                 alt={item.title}
+              /> */}
+              <ResponsiveCardImage
+                src={item.img}
+                alt={item.title}
+                focal={item.focal || "center"}
+                height={300}
               />
+
               <CardContent sx={{ flexGrow: 1 }}>
-                <Typography variant="h6" align="center" sx={{ marginBottom: 1 }}>
+                <Typography
+                  variant="h6"
+                  align="center"
+                  sx={{ marginBottom: 1 }}
+                >
                   {item.title}
                 </Typography>
                 <Typography variant="body1" align="center">
