@@ -207,8 +207,8 @@ function Education() {
             }}
           >
             <Email sx={{ marginRight: 1 }} />
-            <Link href="mailto:andreas@traochtrad.se" color="inherit">
-              andreas@traochtrad.se
+            <Link href="mailto:info@neves.nu" color="inherit">
+              info@neves.nu
             </Link>
           </Typography>
         </Box>
