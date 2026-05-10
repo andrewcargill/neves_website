@@ -34,7 +34,7 @@ function Footer() {
             </Typography>
             <Typography variant="body2">
               Email:{' '}
-              <Link href="mailto:andreas@traochtrad.se" color="inherit">
+              <Link href="mailto:info@neves.nu" color="inherit">
                 info@neves.nu
               </Link>
             </Typography>

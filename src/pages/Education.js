@@ -39,7 +39,7 @@ function Education() {
       </Helmet>
       <Box mb={8}>
         {/* Header */}
-        <Box
+        {/* <Box
           className="header-fade-in"
           sx={{
             backgroundImage: `url(${heroImage})`,
@@ -52,7 +52,7 @@ function Education() {
             color: "white",
             textAlign: "center",
           }}
-        ></Box>
+        ></Box> */}
 
         {/* Instructor Section */}
         <Container
